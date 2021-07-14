@@ -90,7 +90,7 @@ Authorization: Bearer <token>
 Request
 
 ```
-  "query": ''
+  "query": 'Spider-man'
 ```
 
 Response
