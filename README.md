@@ -45,11 +45,11 @@ docker-compose down
 
 ```
 
-## Endpoints
+# Endpoints
 
 App provides two endpoints `/auth` and `/movies`
 
-# /auth example request
+## /auth example request
 
 To authorize user call the auth service using for example `curl`. We assume
 that the auth service is running of the default port `3000`.
@@ -77,7 +77,7 @@ Response
 
 ```
 
-# /movies example request
+## /movies example request
 
 To add movie to database call that endpoint for example using `Postman` app. Service is still running on post `3000`
 
@@ -87,15 +87,32 @@ First of all, add header to your API call
 Authorization: Bearer <token>
 ```
 
-Now, with token you can add movies to database with body parsed with JSON
+Request
 
 ```
   "query": ''
 ```
 
-## Users
+Response
+
+```
+{
+    "_id": "60eeb19ed4523c8fceadb627",
+    "Title": "Spider-Man",
+    "Released": "2002-05-03T00:00:00.000Z",
+    "Genre": "Action, Adventure, Sci-Fi",
+    "Director": "Sam Raimi",
+    "author": "434",
+    "createdAt": "2021-07-14T09:42:54.664Z",
+    "__v": 0
+}
+```
+
+# Users
 
 1. `Basic` user
+
+Basic user is limited to add 5 movies per month
 
 ```
 
